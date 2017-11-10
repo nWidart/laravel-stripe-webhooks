@@ -14,7 +14,7 @@ class StripeWebhooksController extends Controller
         $this->middleware(VerifySignature::class);
     }
 
-    public function __invoke(Request $request)
+    public function store(Request $request)
     {
         $eventPayload = $request->input();
 
